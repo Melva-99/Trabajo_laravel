@@ -1,8 +1,8 @@
 @extends('plantilla')
-@section('titulo', 'Contacto')
+@section('titulo', 'Contactos')
 @section('Contenido')
     <h1>Contacto</h1>
-    <form method="POST" action={{route('Contacto')}}>
+    <form method="POST" action={{route('contactos')}}>
         @csrf
         <input name="fullname" placeholder="Nombre" value='{{old('fullname')}}'><br>
         {!!$errors->first('fullname', '<small>:message</small><br>')!!}
